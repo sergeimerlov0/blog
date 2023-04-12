@@ -13,10 +13,12 @@
         <h3 th:text="${el.title}"/>
         <p th:text="${el.full_text}"/>
         <p><b>Просмотры: </b><span th:text="${el.views}"/></p>
-        <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">Редактирова</a>
-        <a th:href="'/blog/' + ${el.id} + '/remove'" class="btn btn-warning">Удаление</a>
+        <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">Редактирова</a><br><br>
+        <form th:action="'/blog/' + ${id} + '/remove'" method="post">
+            <button  class="btn btn-warning" type="submit">Удаление</button>
+        </form>
     </div>
-</div>
+</div>>
 
 <footer th:insert="blocs/footers :: footer"></footer>
 
